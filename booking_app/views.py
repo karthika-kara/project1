@@ -4,6 +4,7 @@ from .serializers import RegisterSerializer, GarageSerializer, ServiceSerializer
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
+from django.core.mail import send_mail
 
 class RegisterViewset(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -31,6 +32,16 @@ class ServiceViewSet(viewsets.ModelViewSet):
 class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
+    
+
+    def send_booking_email(user_email, garage_name):
+        subject = 'Booking Confirmation'
+        message = f'Your booking for garage "{garage_name}" has been confirmed. Thank you!'
+        from_email = 'karthika271@gmail.com'
+        recipient_list = [user_email]
+
+        send_mail(subject, message, from_email, recipient_list)
+
 
 class PaymentViewSet(viewsets.ModelViewSet):
     queryset = Payment.objects.all()
