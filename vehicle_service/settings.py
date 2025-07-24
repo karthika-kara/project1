@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'vehicle_service.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'vehicle_service_book_db3',
+        'NAME': 'vehicle_db',
         'USER': 'root',
         'PASSWORD': 'karthika',
         'HOST': 'localhost',
@@ -100,14 +100,14 @@ DATABASES = {
     }
 }
 
-# settings.py
+'''# settings.py
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # or another SMTP server
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'karthika271@gmail.com'
 EMAIL_HOST_PASSWORD = 'bvrk fdeh lkof zzlq'  # Use app password, not your actual password
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER'''
 
 
 

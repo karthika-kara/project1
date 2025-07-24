@@ -28,7 +28,7 @@ class GarageViewSet(viewsets.ModelViewSet):
 class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
-
+'''
 class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
@@ -40,7 +40,7 @@ class BookingViewSet(viewsets.ModelViewSet):
         from_email = 'karthika271@gmail.com'
         recipient_list = [user_email]
 
-        send_mail(subject, message, from_email, recipient_list)
+        send_mail(subject, message, from_email, recipient_list)'''
 
 
 class PaymentViewSet(viewsets.ModelViewSet):
