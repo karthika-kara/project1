@@ -28,12 +28,12 @@ class GarageViewSet(viewsets.ModelViewSet):
 class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
-'''
+
 class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
     
-
+'''
     def send_booking_email(user_email, garage_name):
         subject = 'Booking Confirmation'
         message = f'Your booking for garage "{garage_name}" has been confirmed. Thank you!'
