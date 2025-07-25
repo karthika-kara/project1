@@ -34,8 +34,8 @@ class RegisterSerializer(serializers.ModelSerializer):
         validated_data.pop('password2')
         user = User.objects.create_user(**validated_data)
         if image:
-            user.profile.image = image
-            user.profile.save()
+            user.image = image
+            user.save()
         return user
 
 

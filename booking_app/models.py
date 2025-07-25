@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     email = models.EmailField(unique=True) 
     image = models.ImageField(upload_to='profile_images/', default='profile_images/default.png')
-    phone_number = models.CharField(max_length=15, blank=True, null=True)
+    phone_number = models.CharField(max_length=15, blank=Flase, null=Flae)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
 
